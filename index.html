@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <!-- The hamburger
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dragula.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.3/Pizzicato.js"></script>
+</head>
+<body>
+
+<div id="layout" class="pure-g"> <!-- LAYOUT --------------------------------------------------------------------->
+
+  <!-- The hamburger -->
+  <div id="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+
+  <!-- THE SIDEBAR -->
+
+  <div id="sidebar" data-status="close"> <!-- SIDEBAR --------------------------------------------------------------------->
+
+    <div id="sidebarTitle">
+      <h1>Web Drum Pads</h1>
+      <p>drag and drop a new sound to any drum pad</p>
+    </div>
+
+    <!-- the sound tree -->
+    <div id="fileTree">
+      <ul id="listHeads" class="collapsibleList">
+        <li>Sets
+          <ul id="setList"></ul>
+        </li>
+        <li>Sounds
+          <ul id="soundList"></ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+<div id="main"> <!-- MAIN ---------------------------------------------------------------------------------------->
+
+  <div id="controls"> <!-- CONTROLS --------------------------------------------------------------------->
+
+  <!-- KEYS --------------------------------------------->
+  <div class="keys">
+
+
+    <!-- A (65) -->
+    <div data-key="65" data-kbd="A" class="key dndKey">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+
+    <!-- S (83) -->
+    <div data-key="83" data-kbd="S" class="key dndKey">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+
+    <!-- D (68) -->
+    <div data-key="68" data-kbd="D" class="key dndKey">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+
+    <!-- F (70) -->
+    <div data-key="70" data-kbd="F" class="key dndKey">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+
+    <!-- G (71) -->
+    <div data-key="71" data-kbd="G" class="key dndKey">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+
+    <!-- H (72) -->
+    <div data-key="72" data-kbd="H" class="key dndKey">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+
+    <!-- J (74) -->
+    <div data-key="74" data-kbd="J" class="key dndKey">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+
+    <!-- K (75) -->
+    <div data-key="75" data-kbd="K" class="key dndKey">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+
+    <!-- L (76) -->
+    <div data-key="76" data-kbd="L" class="key dndKey">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+
+
+  </div> <!-- END keys------------------------------------>
+
+
+  <!-- EFFECTS -->
+  <div class="effects">
+
+    <!-- A (65) -->
+    <div data-key="65" data-kbd="A" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="S" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="D" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="F" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="G" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="H" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="J" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="K" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+    <div data-key="65" data-kbd="L" class="effect">
+      <select class="fxSelect">
+        <option value="noeffects" selected>No Effects</option>
+        <option value="delay">Delay</option>
+        <option value="reverb">Reverb</option>
+        <option value="distortion">Distortion</option>
+        <option value="flanger">Flanger</option>
+      </select>
+    </div>
+
+  </div> <!-- END effects--------------------------------->
+
+  <!-- Ranges -->
+  <div class="rangesContainer" style="visibility:hidden"> <!-- orange -->
+
+    <div class="channelRange" data-kbd="A" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="S" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="D" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="F" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="G" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="H" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="J" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="K" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+    <div class="channelRange" data-kbd="L" style="visibility:hidden">
+    </div> <!-- END channelRange -->
+
+  </div> <!-- END rangesContainer --------------------------------->
+
+
+</div> <!-- END controls--------------------------------->
+
+
+
+
+<div id="console"></div>
+
+</div> <!-- END main ------------------------------------------------------------------------------------------>
+
+<!-- TEMPLATES! -->
+
+<!-- inputRange template -->
+<div id="template-effectParameter" style="display:none">
+  <div class="inputRange">
+    <p><span class="fxTitle"></span>: <span class="fxValue"></span></p>
+    <input type="range" data-parameter="">
+  </div>
+</div>
+
+
+</div> <!-- END layout ---------------------------------------------------------------------------------------->
+
+
+<!-- SCRIPTS ------------------------------------------>
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/CollapsibleLists.js"></script>
+<script src='js/dragula.js'></script>
+
+</body>
+</html>

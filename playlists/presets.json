@@ -1,0 +1,11 @@
+{
+  "A": {"name": "clap00", "path": "sounds/claps/clap00.wav"},
+  "S": {"name": "hithat00", "path": "sounds/hithats/hihat00.wav"},
+  "D": {"name": "kick00", "path": "sounds/kicks/kick00.wav"},
+  "F": {"name": "openhat00", "path": "sounds/hithats/openhat00.wav"},
+  "G": {"name": "808_00", "path": "sounds/kicks/808_00.wav"},
+  "H": {"name": "ride00", "path": "sounds/ride-crash/ride00.wav"},
+  "J": {"name": "snare00", "path": "sounds/snares/snare00.wav"},
+  "K": {"name": "tom00", "path": "sounds/tom-rim/tom00.wav"},
+  "L": {"name": "tink00", "path": "sounds/tom-rim/tink00.wav"}
+}

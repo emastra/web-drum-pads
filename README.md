@@ -1,5 +1,6 @@
-server fantastico
-client async error handling !!
-e guarda vari bugs: con effetti, ...
-fai mia funzione per liste che collassano
-niente third-party libraries, eccetto dragula !!
+Server fantastico.
+Client async error handling!!.
+Ci sono vari bugs da correggere: con effetti, ecc.
+Fai mia funzione per liste che collassano.
+Niente third-party libraries, eccetto dragula!!.
+

@@ -5,7 +5,7 @@ const serveStatic = require('./serveStatic.js');
 var routes = require('./routes.js');
 
 
-// the web server
+// the web server //
 http.createServer(function(request, response) {
 
   console.log(`Request made: ${request.method} ${request.url}`);
